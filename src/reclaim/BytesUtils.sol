@@ -5,14 +5,8 @@ pragma solidity ^0.8.13;
  * Utilities for bytes manipulation & conversion
  */
 library BytesUtils {
-    function bytesToUInt(
-        bytes memory data,
-        uint offset
-    ) internal pure returns (uint) {
-        require(
-            offset + 4 <= data.length,
-            "Offset + 4 must be within data bounds"
-        );
+    function bytesToUInt(bytes memory data, uint256 offset) internal pure returns (uint256) {
+        require(offset + 4 <= data.length, "Offset + 4 must be within data bounds");
 
         uint32 result;
         assembly {

@@ -2,11 +2,7 @@
 pragma solidity ^0.8.13;
 
 interface SemaphoreInterface {
-    function createGroup(
-        uint256 groupId,
-        uint256 merkleTreeDepth,
-        address admin
-    ) external;
+    function createGroup(uint256 groupId, uint256 merkleTreeDepth, address admin) external;
 
     function addMember(uint256 groupId, uint256 identityCommitment) external;
 

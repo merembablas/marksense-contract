@@ -8,12 +8,7 @@ library Random {
      * @dev generates a random number from the given seed
      * This will always return the same number for the same seed & block
      */
-    function random(uint256 seed) internal view returns (uint) {
-        return
-            uint(
-                keccak256(
-                    abi.encodePacked(block.prevrandao, block.timestamp, seed)
-                )
-            );
+    function random(uint256 seed) internal view returns (uint256) {
+        return uint256(keccak256(abi.encodePacked(block.prevrandao, block.timestamp, seed)));
     }
 }
