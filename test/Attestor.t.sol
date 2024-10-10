@@ -12,15 +12,18 @@ contract AttestorTest is Test {
     function setUp() public {
         string[] memory providers = new string[](1);
         providers[0] = "http";
-        vm.prank(owner);
-        attestor = new Attestor(providers);
+
+        vm.startPrank(owner);
+        attestor = new Attestor();
+        attestor.initialize(owner, "Marksense Proof PnL", "MRKP", providers);
+        vm.stopPrank();
     }
 
     function testSetOwner() public {
         assertEq(attestor.owner(), owner);
 
         vm.prank(owner);
-        attestor.transferOwner(newOwner);
+        attestor.transferOwnership(newOwner);
 
         assertEq(attestor.owner(), newOwner);
     }

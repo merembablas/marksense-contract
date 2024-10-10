@@ -1,0 +1,68 @@
+{
+  "name": "Proof of PnL",
+  "description": "Binance Future Trade Proof of PnL",
+  "image": "https://blala",
+  "external_url": "https://blala",
+  "attributes": [
+    {
+      "trait_type": "exchange",
+      "value": "Binance"
+    },
+    {
+      "trait_type": "symbol",
+      "value": "AAVEUSDT"
+    },
+    {
+      "trait_type": "pnl",
+      "value": "-100"
+    },
+    {
+      "trait_type": "time",
+      "value": "xxx"
+    }
+  ],
+  "proof" : {
+    "transformedProof": {
+        "claimInfo": {
+            "context": "{\"extractedParameters\":{\"orderId\":\"14886966362\"},\"providerHash\":\"0x38f81b30b82625a4e5f32c23defef8a0fb64077157db446951dfbea6489483b7\"}",
+            "parameters": "{\"body\":\"\",\"method\":\"GET\",\"responseMatches\":[{\"type\":\"regex\",\"value\":\"\\\"orderId\\\":\\\\s*(?<orderId>[\\\\d.]+)\"}],\"responseRedactions\":[],\"url\":\"https://fapi.binance.com/fapi/v1/userTrades?timestamp=1728545390226&symbol=AAVEUSDT&orderId=14886966362&recvWindow=60000&signature=ae8b7c818e87901396912e21d62beb3cde4b323386187effc88f42db2bd0f58e\"}",
+            "provider": "http"
+        },
+        "signedClaim": {
+            "claim": {
+                "epoch": 1,
+                "identifier": "0x8264684ca4ea7e5f9952589fdefba9dde70702b323275b1efec1b6057e3f3f51",
+                "owner": "0xad0d5cda29271a3ee858d0c938cea18aab865409",
+                "timestampS": 1728545391
+            },
+            "signatures": [
+                "0x7e43eb57f8a758607e5759af1b2875b44a471409386be4ab3589eeb1dd51836076de37c66d87498de71fe30a4de79917c093429c468e10c0b2e1f0f86eb13d611b"
+            ]
+        }
+    },
+    "proof": {
+        "claimData": {
+            "provider": "http",
+            "parameters": "{\"body\":\"\",\"method\":\"GET\",\"responseMatches\":[{\"type\":\"regex\",\"value\":\"\\\"orderId\\\":\\\\s*(?<orderId>[\\\\d.]+)\"}],\"responseRedactions\":[],\"url\":\"https://fapi.binance.com/fapi/v1/userTrades?timestamp=1728545390226&symbol=AAVEUSDT&orderId=14886966362&recvWindow=60000&signature=ae8b7c818e87901396912e21d62beb3cde4b323386187effc88f42db2bd0f58e\"}",
+            "owner": "0xad0d5cda29271a3ee858d0c938cea18aab865409",
+            "timestampS": 1728545391,
+            "context": "{\"extractedParameters\":{\"orderId\":\"14886966362\"},\"providerHash\":\"0x38f81b30b82625a4e5f32c23defef8a0fb64077157db446951dfbea6489483b7\"}",
+            "identifier": "0x8264684ca4ea7e5f9952589fdefba9dde70702b323275b1efec1b6057e3f3f51",
+            "epoch": 1
+        },
+        "identifier": "0x8264684ca4ea7e5f9952589fdefba9dde70702b323275b1efec1b6057e3f3f51",
+        "signatures": [
+            "0x7e43eb57f8a758607e5759af1b2875b44a471409386be4ab3589eeb1dd51836076de37c66d87498de71fe30a4de79917c093429c468e10c0b2e1f0f86eb13d611b"
+        ],
+        "extractedParameterValues": {
+            "orderId": "14886966362"
+        },
+        "witnesses": [
+            {
+                "id": "0x307832343438393735373233363865616466363562666263356165633938643865353434336139303732",
+                "url": "wss://witness.reclaimprotocol.org/ws"
+            }
+        ]
+    }
+}
+}
